@@ -1,0 +1,21 @@
+/* トップページ
+   ========================================================================== */
+
+/**
+ * コメント
+ */
+
+.ct-copy {
+	@mixin clearfix;
+	font-size: 2rem;
+}
+.main-flex {
+	display: flex;
+	&_m2 {
+		padding: 20px;
+	}
+}
+.main-flex_m1 {
+	padding: 10px;
+	@mixin opacity .6;
+}

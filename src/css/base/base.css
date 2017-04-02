@@ -87,8 +87,7 @@ dd {
 blockquote {
 	margin: 0 0 1rem;
 }
-/* Prevent double borders */
-table {
+table { // Prevent double borders
 	border-collapse: collapse;
 }
 pre {

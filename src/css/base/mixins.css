@@ -7,10 +7,11 @@
 }
 @define-mixin opacity $opacity {
   opacity: $opacity;
-  /* IE8 filter */
+  // IE8 filter
   $opacity-ie: ($opacity * 100);
   filter: alpha(opacity=$opacity-ie);
 }
+// CSS image replacement
 @define-mixin text-hide {
 	font: 0/0 a;
 	color: transparent;

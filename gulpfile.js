@@ -9,6 +9,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var plumber = require('gulp-plumber'); // エラーが起きてもwatchを終了しない
 var notify = require('gulp-notify'); // エラーが起こったときの通知
+var stripInlineComments = require('postcss-strip-inline-comments');
+var scss = require('postcss-scss');
 
 var path = {
 	srcCss: './src/css/',
@@ -25,6 +27,7 @@ function plumberWithNotify() {
 gulp.task('compileCss', function() {
 	var processors = [
 		easyImport({ glob: true }),
+		stripInlineComments,
 		mixins,
 		simpleVars,
 		nested,
@@ -33,7 +36,7 @@ gulp.task('compileCss', function() {
 	return gulp.src(path.srcCss + 'style.css')
 		.pipe(plumberWithNotify())
 		.pipe(sourcemaps.init())
-		.pipe(postcss(processors)) // PostCSSに渡して処理
+		.pipe(postcss(processors, {syntax: scss})) // PostCSSに渡して処理
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.destCss))
 });

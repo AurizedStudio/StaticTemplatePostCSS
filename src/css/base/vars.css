@@ -1,5 +1,5 @@
 $font-family-base: Roboto, "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
-$font-size-base: 1rem !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $line-height-base: 1.5;
 $body-color: #000;
 $body-bg: #fff;

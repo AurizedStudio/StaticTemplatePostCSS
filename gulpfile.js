@@ -11,6 +11,7 @@ var plumber = require('gulp-plumber'); // エラーが起きてもwatchを終了
 var notify = require('gulp-notify'); // エラーが起こったときの通知
 var stripInlineComments = require('postcss-strip-inline-comments');
 var scss = require('postcss-scss');
+var calc = requier('postcss-calc');
 
 var path = {
 	srcCss: './src/css/',
@@ -31,6 +32,7 @@ gulp.task('compileCss', function() {
 		mixins,
 		simpleVars,
 		nested,
+		calc,
 		autoprefixer({browsers: ['last 2 versions']})
 	];
 	return gulp.src(path.srcCss + 'style.css')

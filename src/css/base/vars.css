@@ -1,4 +1,4 @@
-$font-family-base: Roboto, "Droid Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $line-height-base: 1.5;
 $body-color: #000;

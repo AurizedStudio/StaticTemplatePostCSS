@@ -11,7 +11,7 @@ var plumber = require('gulp-plumber'); // エラーが起きてもwatchを終了
 var notify = require('gulp-notify'); // エラーが起こったときの通知
 var stripInlineComments = require('postcss-strip-inline-comments');
 var scss = require('postcss-scss');
-var calc = requier('postcss-calc');
+var calc = require('postcss-calc');
 
 var path = {
 	srcCss: './src/css/',

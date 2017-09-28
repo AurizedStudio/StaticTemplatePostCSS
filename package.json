@@ -6,19 +6,19 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.18.8",
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
-    "gulp-sourcemaps": "^2.5.0",
-    "postcss-calc": "^5.3.1",
-    "postcss-easy-import": "^2.0.0",
-    "postcss-mixins": "^5.4.1",
-    "postcss-nested": "^1.0.0",
-    "postcss-scss": "^0.4.1",
-    "postcss-simple-vars": "^3.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "postcss-calc": "^6.0.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-mixins": "^6.1.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-scss": "^1.0.2",
+    "postcss-simple-vars": "^4.1.0",
     "postcss-strip-inline-comments": "^0.1.5"
   }
 }

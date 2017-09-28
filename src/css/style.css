@@ -1,6 +1,5 @@
 @import "base/vars.css";
 @import "base/mixins.css";
-@import "base/normalize.css";
 @import "base/base.css";
 @import "namespaces/top-page.css";
 @import "base/utilities.css";

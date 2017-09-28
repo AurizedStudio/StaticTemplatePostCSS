@@ -19,3 +19,6 @@
 	padding: 10px;
 	@mixin opacity .6;
 }
+.fonttest {
+	font-family: "Noto Sans Japanese", "メイリオ", Meiryo;
+}

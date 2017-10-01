@@ -19,21 +19,197 @@
 <link href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet">
 </head>
 <body>
-<header>
-	<h1>タイトル</h1>
-</header>
-<main>
-	<p class="ct-copy">コピー</p>
-	<div class="main-flex">
-		<p class="main-flex_m1">フレックスコンテンツ</p>
-		<p class="main-flex_m2">フレックスコンテンツ</p>
-	</div>
-	<p class="fonttest">フォントテストコンテンツ</p>
-	<p><a href="#">リンクテキストコンテンツ</a></p>
-</main>
-<footer>
-	<p>フッターコンテンツ</p>
-</footer>
+<div class="wrap">
+	<header>
+		<h1>タイトル</h1>
+	</header>
+	<main>
+		<p class="ct-copy">コピー</p>
+		<div class="main-flex">
+			<p class="main-flex_m1">フレックスコンテンツ</p>
+			<p class="main-flex_m2">フレックスコンテンツ</p>
+		</div>
+		<p class="fonttest">フォントテストコンテンツ</p>
+		<p><a href="#">リンクテキストコンテンツ</a></p>
+		<h2>フォーム</h2>
+		<div>
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					<small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect1">Example select</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option selected>Open this select menu</option>
+						<option value="one">One</option>
+						<option value="two">Two</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+						<option value="five">Five</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect2">Example multiple select</label>
+					<select multiple class="form-control" id="exampleFormControlSelect2">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Example textarea</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlFile1">Example file input</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile1">
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">
+					Check me out
+					</label>
+				</div>
+
+				<h3 class="mt20">Input readonly elements / form-inline</h3>
+				<div class="form-inline">
+					<div class="form-group">
+						<label for="staticEmail2" class="sr-only">Email</label>
+						<input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+					</div>
+					<div class="form-group mr1rem">
+						<label for="inputPassword2" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+					</div>
+					<button type="submit" class="btn btn-primary">Confirm identity</button>
+				</div>
+				<div class="form-inline mt1rem">
+					<label for="inputEmail3">Email</label>
+					<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+					<label for="inputPassword3">Password</label>
+					<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				</div>
+				<div class="form-inline mt1rem">
+					<div>Checkbox</div>
+						<div class="form-check">
+							<label class="form-check-label">
+							<input class="form-check-input" type="checkbox"> Check me out
+							</label>
+						</div>
+				</div>
+
+			  <div class="form-inline mt1rem">
+					<label class="sr-only" for="inlineFormInputName2">Name</label>
+					<input type="text" class="form-control" id="inlineFormInputName2" placeholder="Jane Doe">
+
+					<div class="form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox"> Remember me
+						</label>
+					</div>
+					<label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+					<input type="text" class="form-control bdrnone" id="inlineFormInputGroupUsername2" placeholder="Username">
+					<button type="submit" class="btn">Submit</button>
+			  </div>
+
+				<h3 class="mt1rem">top-page-form</h3>
+				<fieldset class="top-page-form">
+					<div class="title">
+						<legend class="col-form-legend">Radios</legend>
+					</div>
+					<div class="input">
+						<div class="form-check">
+							<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+							Option one is this and that&mdash;be sure to include why it's great
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+							Option two can be something else and selecting it will deselect option one
+							</label>
+						</div>
+						<div class="form-check disabled">
+							<label class="form-check-label">
+							<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+							Option three is disabled
+							</label>
+						</div>
+					</div>
+				</fieldset>
+				<div class="form-group">
+					<div>
+						<button type="submit" class="btn">Sign in</button>
+					</div>
+				</div>
+
+				<h3>radio</h3>
+				<div class="form-check">
+					<label class="form-check-label">
+					<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+					Option one is this and that&mdash;be sure to include why it's great
+					</label>
+				</div>
+				<div class="form-check">
+					<label class="form-check-label">
+					<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+					Option two can be something else and selecting it will deselect option one
+					</label>
+				</div>
+				<div class="form-check disabled">
+					<label class="form-check-label">
+					<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+					Option three is disabled
+					</label>
+				</div>
+
+				<h3>checkbox/radio inline</h3>
+				<div class="clearfix">
+					<div class="form-check form-check-inline">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+						</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+						</label>
+					</div>
+					<div class="form-check form-check-inline disabled">
+						<label class="form-check-label">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled> 3
+						</label>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="form-check form-check-inline">
+						<label class="form-check-label">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+						</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<label class="form-check-label">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+						</label>
+					</div>
+					<div class="form-check form-check-inline disabled">
+						<label class="form-check-label">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled> 3
+						</label>
+					</div>
+				</div>
+			</form>
+		</div>
+	</main>
+	<footer class="mt20">
+		<p>フッターコンテンツ</p>
+	</footer>
+</div>
 <script src="js/jquery-3.2.1.min.js"></script>
 </body>
 </html>

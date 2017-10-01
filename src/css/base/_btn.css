@@ -1,0 +1,42 @@
+/* ボタン
+   ========================================================================== */
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+	cursor: pointer;
+	transition: all .15s ease-in-out;
+//  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+	// Share hover and focus styles
+	&:focus,
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus,
+	&.focus {
+		outline: 0;
+		box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+	}
+
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+		opacity: .65;
+		box-shadow: none;
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+		box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	}
+}

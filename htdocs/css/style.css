@@ -6,7 +6,6 @@
 }
 html {
 	font-family: sans-serif;
-	font-size: 62.5%;
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -22,7 +21,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
-	font-size: 1.4rem;
+	font-size: 1rem !default;
 	font-weight: normal;
 	line-height: 1.5;
 	color: #000;
@@ -262,11 +261,305 @@ template {
 [hidden] {
 	display: none !important;
 }
+/* フォーム
+   ========================================================================== */
+.form-control {
+	display: block;
+	width: 100%;
+	padding: .5rem .75rem;
+	font-size: 1rem !default;
+	line-height: 1.25;
+	color: #495057;
+	background-color: #fff;
+	background-image: none;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+.form-control::-ms-expand {
+		background-color: transparent;
+		border: 0;
+	}
+.form-control:focus {
+		color: #495057;
+		background-color: #fff;
+		border-color: lighten(#007bff, 25%);
+		outline: none;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+		        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	}
+.form-control::-webkit-input-placeholder {
+		color: #868e96;
+		opacity: 1;
+	}
+.form-control:-ms-input-placeholder {
+		color: #868e96;
+		opacity: 1;
+	}
+.form-control::placeholder {
+		color: #868e96;
+		opacity: 1;
+	}
+.form-control:disabled,
+	.form-control[readonly] {
+		background-color: #e9ecef;
+		opacity: 1;
+	}
+select.form-control:not([size]):not([multiple]) {
+		height: calc(2.25rem + 2px);
+	}
+select.form-control:focus::-ms-value {
+		color: #495057;
+		background-color: #fff;
+	}
+.form-control-file,
+.form-control-range {
+	display: block;
+}
+.col-form-legend {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0;
+	font-size: 1rem;
+}
+.form-control-plaintext {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0;
+	line-height: 1.25;
+	background-color: transparent;
+	border: solid transparent;
+	border-width: 1px 0;
+}
+.form-group {
+	margin-bottom: 1rem;
+}
+.form-text {
+	display: block;
+	margin-top: .25rem;
+}
+.form-check {
+	position: relative;
+	display: block;
+	margin-bottom: .5rem;
+}
+.form-check.disabled .form-check-label {
+			color: #868e96;
+		}
+.form-check-label {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+.form-check-input {
+  position: absolute;
+  margin-top: .25rem;
+  margin-left: -1.25rem;
+}
+.form-check-input:only-child {
+		position: static;
+	}
+.form-check-inline {
+  display: inline-block;
+  margin-right: .25rems;
+}
+.form-check-inline + .form-check-inline {
+		margin-left: .75rem;
+	}
+.form-check-inline .form-check-label {
+    vertical-align: middle;
+  }
+.form-inline {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: row wrap;
+	        flex-flow: row wrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.form-inline .form-check {
+		width: 100%;
+	}
+.form-inline label {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		margin-bottom: 0;
+	}
+.form-inline .form-group {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 auto;
+		        flex: 0 0 auto;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: row wrap;
+		        flex-flow: row wrap;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		margin-bottom: 0;
+	}
+.form-inline .form-control {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle;
+	}
+.form-inline .form-control-plaintext {
+		display: inline-block;
+	}
+.form-inline .input-group {
+		width: auto;
+	}
+.form-inline .form-control-label {
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+.form-inline .form-check {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		width: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+.form-inline .form-check-label {
+		padding-left: 0;
+	}
+.form-inline .form-check-input {
+		position: relative;
+		margin-top: 0;
+		margin-right: .25rem;
+		margin-left: 0;
+	}
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+.input-group-addon,
+.input-group-btn {
+	vertical-align: middle;
+  white-space: nowrap;
+}
+.input-group-addon {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+  color: #495057;
+  text-align: center;
+  background-color: #e9ecef;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+.input-group .form-control:not(:last-child),
+.input-group-addon:not(:last-child),
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn,
+.input-group-btn:not(:last-child) > .dropdown-toggle,
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group-addon:not(:last-child) {
+  border-right: 0;
+}
+.input-group .form-control:not(:first-child),
+.input-group-addon:not(:first-child),
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn,
+.input-group-btn:not(:first-child) > .dropdown-toggle,
+.input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-control + .input-group-addon:not(:first-child) {
+  border-left: 0;
+}
+/* ボタン
+   ========================================================================== */
+.btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	border: 1px solid transparent;
+	padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  border-radius: .25rem;
+	cursor: pointer;
+	-webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+.btn:focus,
+	.btn:hover {
+		text-decoration: none;
+	}
+.btn:focus,
+	.btn.focus {
+		outline: 0;
+		-webkit-box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+		        box-shadow: 0 0 0 3px rgba(0,123,255,.25);
+	}
+.btn.disabled,
+	.btn:disabled {
+		opacity: .65;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+.btn:active,
+	.btn.active {
+		background-image: none;
+		-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+		        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+	}
 /* トップページ
    ========================================================================== */
 /**
  * コメント
  */
+.wrap {
+	width: 980px;
+	margin: 0 auto;
+}
 .ct-copy {
 	font-size: 2rem;
 }
@@ -289,18 +582,40 @@ template {
 	filter: alpha(opacity=(.6 * 100));
 }
 .fonttest {
-	font-family: "Noto Sans Japanese", "メイリオ", Meiryo;
+	font-family: "Noto Sans Japanese", Meiryo;
+	font-size: 1.8rem;
 }
+/* フォーム */
+.top-page-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.top-page-form .title {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 0 100px;
+		        flex: 0 0 100px;
+	}
+.top-page-form .title .col-form-legend {
+			padding-top: 0;
+		}
+.top-page-form .input {
+		-webkit-box-flex: 1;
+		    -ms-flex: auto;
+		        flex: auto;
+	}
 /* ユーティリティ
    ========================================================================== */
 .sr-only {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-	margin: -1px;
 	padding: 0;
 	overflow: hidden;
 	clip: rect(0,0,0,0);
+	white-space: nowrap;
+	-webkit-clip-path: inset(50%);
+	        clip-path: inset(50%);
 	border: 0;
 }
 .sr-only-focusable:active,
@@ -308,9 +623,23 @@ template {
 		position: static;
 		width: auto;
 		height: auto;
-		margin: 0;
 		overflow: visible;
 		clip: auto;
+		white-space: normal;
+		-webkit-clip-path: none;
+		        clip-path: none;
+	}
+.text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+.clearfix::after {
+		display: block;
+		content: "";
+		clear: both;
 	}
 .img-responsive {
 	max-width: 100%;
@@ -319,6 +648,18 @@ template {
 .img-widemax {
 	width: 100%;
 	height: auto;
+}
+.bdtnone {
+	border-top: none;
+}
+.bdrnone {
+	border-right: none;
+}
+.bdbnone {
+	border-bottom: none;
+}
+.bdlnone {
+	border-left: none;
 }
 .mt0 {
 	margin-top: 0 !important;
@@ -347,6 +688,12 @@ template {
 .mt40 {
 	margin-top: 40px !important;
 }
+.mt1rem {
+	margin-top: 1rem !important;
+}
+.mt2rem {
+	margin-top: 2rem !important;
+}
 .mb0 {
 	margin-bottom: 0 !important;
 }
@@ -373,6 +720,12 @@ template {
 }
 .mb40 {
 	margin-bottom: 40px !important;
+}
+.mb1rem {
+	margin-bottom: 1rem !important;
+}
+.mb2rem {
+	margin-bottom: 2rem !important;
 }
 .mr0 {
 	margin-right: 0 !important;
@@ -401,6 +754,12 @@ template {
 .mr40 {
 	margin-right: 40px !important;
 }
+.mr1rem {
+	margin-right: 1rem !important;
+}
+.mr2rem {
+	margin-right: 2rem !important;
+}
 .ml0 {
 	margin-left: 0 !important;
 }
@@ -428,5 +787,12 @@ template {
 .ml40 {
 	margin-left: 40px !important;
 }
+.ml1rem {
+	margin-left: 1rem !important;
+}
+.ml2rem {
+	margin-left: 2rem !important;
+}
+
 
 /*# sourceMappingURL=style.css.map */

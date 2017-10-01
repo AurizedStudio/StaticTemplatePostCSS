@@ -1,5 +1,6 @@
 $font-family-base: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
-$font-size-base: 62.5%; // 10px
+// $font-size-base: 62.5%; // 10px
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 $line-height-base: 1.5;
 $body-color: #000;
 $body-bg: #fff;

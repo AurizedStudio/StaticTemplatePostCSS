@@ -1,26 +1,16 @@
 /* ユーティリティ
    ========================================================================== */
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	border: 0;
+	@mixin sr-only;
 }
-
 .sr-only-focusable {
-	&:active,
-	&:focus {
-		position: static;
-		width: auto;
-		height: auto;
-		margin: 0;
-		overflow: visible;
-		clip: auto;
-	}
+	@mixin sr-only-focusable;
+}
+.text-hide {
+	@mixin text-hide;
+}
+.clearfix {
+	@mixin clearfix;
 }
 .img-responsive {
 	max-width: 100%;
@@ -29,6 +19,18 @@
 .img-widemax {
 	width: 100%;
 	height: auto;
+}
+.bdtnone {
+	border-top: none;
+}
+.bdrnone {
+	border-right: none;
+}
+.bdbnone {
+	border-bottom: none;
+}
+.bdlnone {
+	border-left: none;
 }
 .mt0 {
 	margin-top: 0 !important;
@@ -57,6 +59,12 @@
 .mt40 {
 	margin-top: 40px !important;
 }
+.mt1rem {
+	margin-top: 1rem !important;
+}
+.mt2rem {
+	margin-top: 2rem !important;
+}
 .mb0 {
 	margin-bottom: 0 !important;
 }
@@ -83,6 +91,12 @@
 }
 .mb40 {
 	margin-bottom: 40px !important;
+}
+.mb1rem {
+	margin-bottom: 1rem !important;
+}
+.mb2rem {
+	margin-bottom: 2rem !important;
 }
 .mr0 {
 	margin-right: 0 !important;
@@ -111,6 +125,12 @@
 .mr40 {
 	margin-right: 40px !important;
 }
+.mr1rem {
+	margin-right: 1rem !important;
+}
+.mr2rem {
+	margin-right: 2rem !important;
+}
 .ml0 {
 	margin-left: 0 !important;
 }
@@ -137,5 +157,11 @@
 }
 .ml40 {
 	margin-left: 40px !important;
+}
+.ml1rem {
+	margin-left: 1rem !important;
+}
+.ml2rem {
+	margin-left: 2rem !important;
 }
 

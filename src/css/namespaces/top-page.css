@@ -4,7 +4,10 @@
 /**
  * コメント
  */
-
+.wrap {
+	width: 980px;
+	margin: 0 auto;
+}
 .ct-copy {
 	@mixin clearfix;
 	font-size: 2rem;
@@ -20,5 +23,20 @@
 	@mixin opacity .6;
 }
 .fonttest {
-	font-family: "Noto Sans Japanese", "メイリオ", Meiryo;
+	font-family: "Noto Sans Japanese", Meiryo;
+	font-size: 1.8rem;
+}
+
+/* フォーム */
+.top-page-form {
+	display: flex;
+	.title {
+		flex: 0 0 100px; // 固定
+		.col-form-legend {
+			padding-top: 0;
+		}
+	}
+	.input {
+		flex: auto; // 1 1 auto
+	}
 }

@@ -1,0 +1,293 @@
+/* フォーム
+   ========================================================================== */
+.form-control {
+	display: block;
+	width: 100%;
+	padding: .5rem .75rem;
+	font-size: $font-size-base;
+	line-height: 1.25;
+	color: #495057;
+	background-color: #fff;
+	// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+	background-image: none;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 0;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+	// Unstyle the caret on `<select>`s in IE10+.
+	&::-ms-expand {
+		background-color: transparent;
+		border: 0;
+	}
+
+	// Customize the `:focus` state to imitate native WebKit styles.
+	&:focus {
+		color: #495057;
+		background-color: #fff;
+		border-color: lighten(#007bff, 25%);
+		outline: none;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	}
+
+	// Placeholder
+	&::placeholder {
+		color: #868e96;
+		// Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+		opacity: 1;
+	}
+
+	// Disabled and read-only inputs
+	//
+	// HTML5 says that controls under a fieldset > legend:first-child won't be
+	// disabled if the fieldset is disabled. Due to implementation difficulty, we
+	// don't honor that edge case; we style them as disabled anyway.
+	&:disabled,
+	&[readonly] {
+		background-color: #e9ecef;
+		// iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+		opacity: 1;
+	}
+}
+
+select.form-control {
+	&:not([size]):not([multiple]) {
+		height: calc(2.25rem + 2px);
+	}
+
+	&:focus::-ms-value {
+		// Suppress the nested default white text on blue background highlight given to
+		// the selected option text when the (still closed) <select> receives focus
+		// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+		// match the appearance of the native widget.
+		// See https://github.com/twbs/bootstrap/issues/19398.
+		color: #495057;
+		background-color: #fff;
+	}
+}
+
+// Make file inputs better match text inputs by forcing them to new lines.
+.form-control-file,
+.form-control-range {
+	display: block;
+}
+
+//
+// Legends
+//
+
+// For use with horizontal and inline forms, when you need the legend text to
+// be the same size as regular labels, and to align with the form controls.
+.col-form-legend {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0;
+	font-size: 1rem;
+}
+
+// Readonly controls as plain text
+//
+// Apply class to a readonly input to make it appear like regular plain
+// text (without any border, background color, focus indicator)
+.form-control-plaintext {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0;
+	line-height: 1.25;
+	background-color: transparent;
+	border: solid transparent;
+	border-width: 1px 0;
+}
+
+// Form groups
+//
+// Designed to help with the organization and spacing of vertical forms. For
+// horizontal forms, use the predefined grid classes.
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-text {
+	display: block;
+	margin-top: .25rem;
+}
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+.form-check {
+	position: relative;
+	display: block;
+	margin-bottom: .5rem;
+
+	&.disabled {
+		.form-check-label {
+			color: #868e96;
+		}
+	}
+}
+
+.form-check-label {
+  padding-left: 1.25rem;
+  margin-bottom: 0; // Override default `<label>` bottom margin
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: .25rem;
+  margin-left: -1.25rem;
+	&:only-child {
+		position: static;
+	}
+}
+
+// Radios and checkboxes on same line
+.form-check-inline {
+  display: inline-block;
+  margin-right: .25rems;
+	& + .form-check-inline {
+		margin-left: .75rem;
+	}
+
+  .form-check-label {
+    vertical-align: middle;
+  }
+}
+
+// Inline forms
+//
+// Make forms appear inline(-block) by adding the `.form-inline` class. 
+// Requires wrapping inputs and labels with `.form-group` for proper display of
+// default HTML form controls and our custom form controls (e.g., input groups).
+
+.form-inline {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
+
+	// Because we use flex, the initial sizing of checkboxes is collapsed and
+	// doesn't occupy the full-width (which is what we want for xs grid tier),
+	// so we force that here.
+	.form-check {
+		width: 100%;
+	}
+	label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 0;
+	}
+
+	// Inline-block all the things for "inline"
+	.form-group {
+		display: flex;
+		flex: 0 0 auto;
+		flex-flow: row wrap;
+		align-items: center;
+		margin-bottom: 0;
+	}
+
+	// Allow folks to *not* use `.form-group`
+	.form-control {
+		display: inline-block;
+		width: auto; // Prevent labels from stacking above inputs in `.form-group`
+		vertical-align: middle;
+	}
+
+	// Make static controls behave like regular ones
+	.form-control-plaintext {
+		display: inline-block;
+	}
+
+	.input-group {
+		width: auto;
+	}
+
+	.form-control-label {
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	// Remove default margin on radios/checkboxes that were used for stacking, and
+	// then undo the floating of radios and checkboxes to match.
+	.form-check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.form-check-label {
+		padding-left: 0;
+	}
+	.form-check-input {
+		position: relative;
+		margin-top: 0;
+		margin-right: .25rem;
+		margin-left: 0;
+	}
+}
+
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child),
+.input-group .form-control:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.input-group-addon,
+.input-group-btn {
+	vertical-align: middle;
+  white-space: nowrap;
+}
+
+.input-group-addon {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+  color: #495057;
+  text-align: center;
+  background-color: #e9ecef;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+.input-group-addon input[type="radio"],
+.input-group-addon input[type="checkbox"] {
+  margin-top: 0;
+}
+
+.input-group .form-control:not(:last-child),
+.input-group-addon:not(:last-child),
+.input-group-btn:not(:last-child) > .btn,
+.input-group-btn:not(:last-child) > .btn-group > .btn,
+.input-group-btn:not(:last-child) > .dropdown-toggle,
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-addon:not(:last-child) {
+  border-right: 0;
+}
+
+.input-group .form-control:not(:first-child),
+.input-group-addon:not(:first-child),
+.input-group-btn:not(:first-child) > .btn,
+.input-group-btn:not(:first-child) > .btn-group > .btn,
+.input-group-btn:not(:first-child) > .dropdown-toggle,
+.input-group-btn:not(:last-child) > .btn:not(:first-child),
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-control + .input-group-addon:not(:first-child) {
+  border-left: 0;
+}

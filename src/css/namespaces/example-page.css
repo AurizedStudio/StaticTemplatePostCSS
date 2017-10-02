@@ -5,8 +5,11 @@
  * コメント
  */
 .wrap {
-	width: 980px;
-	margin: 0 auto;
+	width: 100%;
+	@mixin media-pc {
+		width: 980px;
+		margin: 0 auto;
+	}
 }
 .ct-copy {
 	@mixin clearfix;
@@ -27,16 +30,24 @@
 	font-size: 1.8rem;
 }
 
-/* フォーム */
-.top-page-form {
-	display: flex;
+/* 個別ページフォーム */
+.example-page-form {
+	@mixin media-tab {
+		display: flex;
+	}
 	.title {
-		flex: 0 0 100px; // 固定
+		@mixin media-tab {
+			flex: 0 0 100px; // 固定
+		}
 		.col-form-legend {
-			padding-top: 0;
+			@mixin media-tab {
+				padding-top: 0;
+			}
 		}
 	}
 	.input {
-		flex: auto; // 1 1 auto
+		@mixin media-tab {
+			flex: auto; // 1 1 auto
+		}
 	}
 }

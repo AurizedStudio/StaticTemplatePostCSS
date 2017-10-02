@@ -585,21 +585,21 @@ select.form-control:focus::-ms-value {
 	font-family: "Noto Sans Japanese", Meiryo;
 	font-size: 1.8rem;
 }
-/* フォーム */
-.top-page-form {
+/* 個別ページフォーム */
+.example-page-form {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
-.top-page-form .title {
+.example-page-form .title {
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 0 100px;
 		        flex: 0 0 100px;
 	}
-.top-page-form .title .col-form-legend {
+.example-page-form .title .col-form-legend {
 			padding-top: 0;
 		}
-.top-page-form .input {
+.example-page-form .input {
 		-webkit-box-flex: 1;
 		    -ms-flex: auto;
 		        flex: auto;

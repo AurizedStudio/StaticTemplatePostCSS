@@ -27,8 +27,8 @@
 	font-size: 1.8rem;
 }
 
-/* フォーム */
-.top-page-form {
+/* 個別ページフォーム */
+.example-page-form {
 	display: flex;
 	.title {
 		flex: 0 0 100px; // 固定

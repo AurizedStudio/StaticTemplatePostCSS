@@ -6,3 +6,7 @@ $body-color: #000;
 $body-bg: #fff;
 $link-color: #0275d8;
 $link-hover-color: #5bc0de;
+
+$breakpoint-sp: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-pc: 980px;

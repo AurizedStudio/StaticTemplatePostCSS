@@ -5,12 +5,15 @@
 		clear: both;
 	}
 }
+
+// @mixin opacity .6;
 @define-mixin opacity $opacity {
   opacity: $opacity;
   // IE8 filter
   $opacity-ie: ($opacity * 100);
   filter: alpha(opacity=$opacity-ie);
 }
+
 // CSS image replacement
 @define-mixin text-hide {
 	font: 0/0 a;
@@ -19,6 +22,7 @@
 	background-color: transparent;
 	border: 0;
 }
+
 @define-mixin sr-only {
 	position: absolute;
 	width: 1px;
@@ -40,5 +44,24 @@
 		clip: auto;
 		white-space: normal;
 		clip-path: none;
+	}
+}
+
+// @mixin media-sp {
+//	property: something;
+// }
+@define-mixin media-sp {
+	@media (max-width: $breakpoint-sp) {
+		@mixin-content;
+	}
+}
+@define-mixin media-tab {
+	@media (min-width: $breakpoint-tablet) {
+		@mixin-content;
+	}
+}
+@define-mixin media-pc {
+	@media (min-width: $breakpoint-pc) {
+		@mixin-content;
 	}
 }

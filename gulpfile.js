@@ -12,6 +12,8 @@ var notify = require('gulp-notify'); // エラーが起こったときの通知
 var stripInlineComments = require('postcss-strip-inline-comments');
 var scss = require('postcss-scss');
 var calc = require('postcss-calc');
+var replace = require('gulp-replace');
+var csscomb = require('gulp-csscomb');
 
 var path = {
 	srcCss: './src/css/',
@@ -40,6 +42,9 @@ gulp.task('compileCss', function() {
 		.pipe(sourcemaps.init())
 		.pipe(postcss(processors, {syntax: scss})) // PostCSSに渡して処理
 		.pipe(sourcemaps.write('.'))
+		.pipe(csscomb())
+//		.pipe(replace(/(;\n)\n/g, '$1')) // 改行が2つ連続してる場合は、1つにする
+//		.pipe(replace(/(\*\/\n)(\/\*)/g, '$1\n$2')) // 連続するコメント行は1行あける
 		.pipe(gulp.dest(path.destCss))
 });
 

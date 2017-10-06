@@ -14,8 +14,10 @@ var scss = require('postcss-scss');
 var calc = require('postcss-calc');
 var replace = require('gulp-replace');
 var csscomb = require('gulp-csscomb');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 var path = {
+	srcHtml: './src/html/',
 	srcCss: './src/css/',
 	dest: './htdocs/',
 	destCss: './htdocs/css/'
@@ -26,6 +28,14 @@ var path = {
 function plumberWithNotify() {
 	return plumber({errorHandler: notify.onError("<%= error.message %>")});
 }
+
+gulp.task('compileHtml', function () {
+	return gulp.src(path.srcHtml + 'page/**/*.html')
+	.pipe(nunjucksRender({
+		path: [path.srcHtml] // String or Array
+	}))
+	.pipe(gulp.dest(path.dest));
+});
 
 gulp.task('compileCss', function() {
 	var processors = [
@@ -48,7 +58,7 @@ gulp.task('compileCss', function() {
 		.pipe(gulp.dest(path.destCss))
 });
 
-gulp.task('serve', ['compileCss'], function(){
+gulp.task('serve', ['compileCss', 'compileHtml'], function(){
 	browserSync.init({
 		server: {
 			baseDir: path.dest,
@@ -57,6 +67,7 @@ gulp.task('serve', ['compileCss'], function(){
 		open: 'external'
 	});
 	gulp.watch(path.srcCss + '**/*.css', ['compileCss']);
+	gulp.watch(path.srcHtml + '**/*.html', ['compileHtml']);
 	gulp.watch([
 		path.dest + '**/*.html',
 		path.dest + '**/*.css',

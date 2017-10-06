@@ -22,6 +22,10 @@
 
 {% include 'module/_head.html' %}
 
+{% if bodyClass == 'page-example2' %}
+<p>if文 page-example2</p>
+{% endif %}
+
 <main>
 {% block main %}
 {% endblock %}

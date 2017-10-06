@@ -11,6 +11,7 @@
     "gulp": "^3.9.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-replace": "^0.6.1",

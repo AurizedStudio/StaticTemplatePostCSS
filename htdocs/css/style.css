@@ -32,7 +32,7 @@ section {
 }
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+	font-family: "Noto Sans Japanese", sans-serif;
 	font-size: 1rem;
 	font-weight: normal;
 	line-height: 1.5;

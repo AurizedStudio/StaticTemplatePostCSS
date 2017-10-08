@@ -51,3 +51,20 @@
 		}
 	}
 }
+
+/* 個別ページフアニメーション */
+@keyframes fade-in-load {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+.main-visual {
+//	animation-name: fade-in-load;
+//	animation-duration: 3s;
+//	animation-timing-function: ease-in-out;
+	animation: fade-in-load 3s ease-in-out
+}

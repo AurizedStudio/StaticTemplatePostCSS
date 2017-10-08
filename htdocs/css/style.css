@@ -638,6 +638,27 @@ select.form-control:focus::-ms-value {
 		flex: auto;
 	}
 }
+/* 個別ページフアニメーション */
+@-webkit-keyframes fade-in-load {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in-load {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.main-visual {
+	-webkit-animation: fade-in-load 3s ease-in-out;
+	animation: fade-in-load 3s ease-in-out;
+}
 /* ユーティリティ
    ========================================================================== */
 .sr-only {

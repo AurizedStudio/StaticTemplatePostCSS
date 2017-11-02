@@ -23,6 +23,13 @@
 	border: 0;
 }
 
+// list
+@define-mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// screen reader
 @define-mixin sr-only {
 	position: absolute;
 	width: 1px;
@@ -45,6 +52,18 @@
 		white-space: normal;
 		clip-path: none;
 	}
+}
+
+// Horizontal gradient, from left to right
+// @mixin gradient-x #222, #333, 0%, 100%;
+@define-mixin gradient-x $start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100% {
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent);
+  background-repeat: repeat-x;
+}
+// Vertical gradient, from top to bottom
+@define-mixin gradient-y $start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100% {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+  background-repeat: repeat-x;
 }
 
 // @mixin media-sp {

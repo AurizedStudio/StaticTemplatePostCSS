@@ -282,8 +282,9 @@ template {
 [hidden] {
 	display: none !important;
 }
-/* フォーム
-   ========================================================================== */
+/* ==================================================
+   フォーム
+ ================================================== */
 .form-control {
 	display: block;
 	width: 100%;
@@ -529,8 +530,9 @@ select.form-control:focus::-ms-value {
 .form-control + .input-group-addon:not(:first-child) {
 	border-left: 0;
 }
-/* ボタン
-   ========================================================================== */
+/* ==================================================
+   ボタン
+ ================================================== */
 .btn {
 	display: inline-block;
 	font-weight: 400;
@@ -572,11 +574,12 @@ select.form-control:focus::-ms-value {
 	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
-/* トップページ
-   ========================================================================== */
-/**
- * コメント
- */
+/* ==================================================
+   CommentLevel 01
+ ================================================== */
+/* --------------------------------------------------
+    CommentLevel 02
+  -------------------------------------------------- */
 .wrap {
 	width: 100%;
 }
@@ -659,8 +662,9 @@ select.form-control:focus::-ms-value {
 	-webkit-animation: fade-in-load 3s ease-in-out;
 	animation: fade-in-load 3s ease-in-out;
 }
-/* ユーティリティ
-   ========================================================================== */
+/* ==================================================
+   ユーティリティ
+ ================================================== */
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -703,6 +707,26 @@ select.form-control:focus::-ms-value {
 .img-widemax {
 	width: 100%;
 	height: auto;
+}
+@media (max-width: 767px) {
+	.hidden-sp {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.visible-sp {
+		display: block;
+	}
+}
+@media (min-width: 768px) {
+	.hidden-tab {
+		display: none;
+	}
+}
+@media (min-width: 768px) {
+	.visible-tab {
+		display: block;
+	}
 }
 .bdtnone {
 	border-top: none;

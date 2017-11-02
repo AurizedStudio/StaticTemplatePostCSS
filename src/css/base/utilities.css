@@ -1,5 +1,6 @@
-/* ユーティリティ
-   ========================================================================== */
+/* ==================================================
+   ユーティリティ
+ ================================================== */
 .sr-only {
 	@mixin sr-only;
 }
@@ -19,6 +20,26 @@
 .img-widemax {
 	width: 100%;
 	height: auto;
+}
+.hidden-sp {
+	@mixin media-sp {
+		display: none;
+	}
+}
+.visible-sp {
+	@mixin media-sp {
+		display: block;
+	}
+}
+.hidden-tab {
+	@mixin media-tab {
+		display: none;
+	}
+}
+.visible-tab {
+	@mixin media-tab {
+		display: block;
+	}
 }
 .bdtnone {
 	border-top: none;
@@ -164,4 +185,3 @@
 .ml2rem {
 	margin-left: 2rem !important;
 }
-

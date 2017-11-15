@@ -45,7 +45,7 @@ gulp.task('compileCss', function() {
 		simpleVars,
 		nested,
 		calc,
-		autoprefixer({browsers: ['last 2 versions']})
+		autoprefixer({browsers: ['last 2 versions'], grid: true})
 	];
 	return gulp.src(path.srcCss + 'style.css')
 		.pipe(plumberWithNotify())

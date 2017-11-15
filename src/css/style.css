@@ -3,6 +3,6 @@
 @import "base/base.css";
 @import "base/_form.css";
 @import "base/_btn.css";
-@import "namespaces/example-page.css";
+@import "namespaces/example.css";
+@import "namespaces/page-example2.css";
 @import "base/utilities.css";
-

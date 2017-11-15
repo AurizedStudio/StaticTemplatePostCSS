@@ -324,6 +324,10 @@ template {
 	color: #868e96;
 	opacity: 1;
 }
+.form-control::-ms-input-placeholder {
+	color: #868e96;
+	opacity: 1;
+}
 .form-control::placeholder {
 	color: #868e96;
 	opacity: 1;
@@ -575,13 +579,11 @@ select.form-control:focus::-ms-value {
 	box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
 /* ==================================================
-   CommentLevel 01
+   example.html （Nunjucksを通していない。主にフォーム要素確認用）
  ================================================== */
-/* --------------------------------------------------
-    CommentLevel 02
-  -------------------------------------------------- */
 .wrap {
 	width: 100%;
+	padding: 0 14px;
 }
 @media (min-width: 980px) {
 	.wrap {
@@ -614,7 +616,9 @@ select.form-control:focus::-ms-value {
 	font-family: "Noto Sans Japanese", Meiryo;
 	font-size: 1.8rem;
 }
-/* 個別ページフォーム */
+/* --------------------------------------------------
+   個別ページフォーム
+ -------------------------------------------------- */
 @media (min-width: 768px) {
 	.example-page-form {
 		display: -webkit-box;
@@ -641,7 +645,109 @@ select.form-control:focus::-ms-value {
 		flex: auto;
 	}
 }
-/* 個別ページフアニメーション */
+/* ==================================================
+   page-example2.html （アニメーション/Grid 確認用）
+ ================================================== */
+/* --------------------------------------------------
+   Grid
+ -------------------------------------------------- */
+@media (min-width: 768px) {
+	.magazine {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		-ms-grid-rows: auto auto;
+		grid-template-rows: auto auto;
+	}
+}
+.magazine-item {
+	margin: 0 0 40px 0;
+}
+@media (min-width: 768px) {
+	.magazine-item {
+		margin: 0 5px 40px 5px;
+	}
+}
+.magazine-today {
+	-ms-grid-column: 1;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	-ms-grid-column-span: 2;
+	-ms-grid-row: 1;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	-ms-grid-row-span: 2;
+}
+.magazine-past01 {
+	-ms-grid-column: 3;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	-ms-grid-column-span: 1;
+	-ms-grid-row: 1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	-ms-grid-row-span: 1;
+}
+.magazine-past02 {
+	-ms-grid-column: 4;
+	grid-column-start: 4;
+	grid-column-end: 5;
+	-ms-grid-column-span: 1;
+	-ms-grid-row: 1;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	-ms-grid-row-span: 1;
+}
+.magazine-past03 {
+	-ms-grid-column: 1;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	-ms-grid-column-span: 1;
+	-ms-grid-row: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	-ms-grid-row-span: 1;
+}
+.magazine-past04 {
+	-ms-grid-column: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	-ms-grid-column-span: 1;
+	-ms-grid-row: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	-ms-grid-row-span: 1;
+}
+.magazine-pickup {
+	-ms-grid-column: 3;
+	grid-column-start: 3;
+	grid-column-end: 5;
+	-ms-grid-column-span: 2;
+	-ms-grid-row: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	-ms-grid-row-span: 1;
+}
+.magazine-today__img,
+.magazine-item__img,
+.magazine-pickup__img {
+	margin: 0 0 6px 0;
+}
+.magazine-today__img img,
+.magazine-item__img img,
+.magazine-pickup__img img {
+	max-width: 100%;
+	height: auto;
+}
+.magazine-today__title,
+.magazine-item__title,
+.magazine-pickup__title {
+	margin: 0 0 4px 0;
+}
+/* --------------------------------------------------
+   個別ページフアニメーション
+ -------------------------------------------------- */
 @-webkit-keyframes fade-in-load {
 	0% {
 		opacity: 0;
@@ -658,7 +764,9 @@ select.form-control:focus::-ms-value {
 		opacity: 1;
 	}
 }
-.main-visual {
+.magazine-today__img,
+.magazine-item__img,
+.magazine-pickup__img {
 	-webkit-animation: fade-in-load 3s ease-in-out;
 	animation: fade-in-load 3s ease-in-out;
 }
@@ -872,6 +980,5 @@ select.form-control:focus::-ms-value {
 .ml2rem {
 	margin-left: 2rem !important;
 }
-
 
 /*# sourceMappingURL=style.css.map */

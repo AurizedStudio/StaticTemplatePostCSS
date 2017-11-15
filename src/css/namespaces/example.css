@@ -1,13 +1,11 @@
 /* ==================================================
-   CommentLevel 01
+   example.html （Nunjucksを通していない。主にフォーム要素確認用）
  ================================================== */
- /* --------------------------------------------------
-    CommentLevel 02
-  -------------------------------------------------- */
 .wrap {
 	width: 100%;
+	padding: 0 14px;
 	@mixin media-pc {
-		width: 980px;
+		width: $width-pc;
 		margin: 0 auto;
 	}
 }
@@ -29,8 +27,9 @@
 	font-family: "Noto Sans Japanese", Meiryo;
 	font-size: 1.8rem;
 }
-
-/* 個別ページフォーム */
+/* --------------------------------------------------
+   個別ページフォーム
+ -------------------------------------------------- */
 .example-page-form {
 	@mixin media-tab {
 		display: flex;
@@ -50,21 +49,4 @@
 			flex: auto; // 1 1 auto
 		}
 	}
-}
-
-/* 個別ページフアニメーション */
-@keyframes fade-in-load {
-	0% {
-		opacity: 0
-	}
-	100% {
-		opacity: 1
-	}
-}
-
-.main-visual {
-//	animation-name: fade-in-load;
-//	animation-duration: 3s;
-//	animation-timing-function: ease-in-out;
-	animation: fade-in-load 3s ease-in-out
 }

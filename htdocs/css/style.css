@@ -610,7 +610,6 @@ select.form-control:focus::-ms-value {
 .main-flex_m1 {
 	padding: 10px;
 	opacity: .6;
-	filter: alpha(opacity=(.6 * 100));
 }
 .fonttest {
 	font-family: "Noto Sans Japanese", Meiryo;
@@ -837,16 +836,16 @@ select.form-control:focus::-ms-value {
 	}
 }
 .bdtnone {
-	border-top: none;
+	border-top: none !important;
 }
 .bdrnone {
-	border-right: none;
+	border-right: none !important;
 }
 .bdbnone {
-	border-bottom: none;
+	border-bottom: none !important;
 }
 .bdlnone {
-	border-left: none;
+	border-left: none !important;
 }
 .mt0 {
 	margin-top: 0 !important;

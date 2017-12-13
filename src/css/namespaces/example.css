@@ -21,7 +21,7 @@
 }
 .main-flex_m1 {
 	padding: 10px;
-	@mixin opacity .6;
+	opacity: .6;
 }
 .fonttest {
 	font-family: "Noto Sans Japanese", Meiryo;

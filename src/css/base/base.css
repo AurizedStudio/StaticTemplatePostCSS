@@ -28,12 +28,14 @@ html {
 	-webkit-text-size-adjust: 100%; // 4
 	-ms-text-size-adjust: 100%; // 4
 	-ms-overflow-style: scrollbar; // 5
-	-webkit-tap-highlight-color: rgba(0,0,0,0); // 6
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 6
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
 @at-root {
-	@-ms-viewport { width: device-width; }
+	@-ms-viewport {
+		width: device-width;
+	}
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
@@ -65,7 +67,7 @@ body {
 //
 // Credit: https://github.com/suitcss/base
 [tabindex="-1"]:focus {
-	outline: none !important;
+	outline: 0 !important;
 }
 
 
@@ -261,7 +263,7 @@ a,
 area,
 button,
 [role="button"],
-input:not([type=range]),
+input:not([type="range"]),
 label,
 select,
 summary,

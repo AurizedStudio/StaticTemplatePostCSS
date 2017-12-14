@@ -34,6 +34,7 @@ gulp.task('compileHtml', function () {
 	.pipe(nunjucksRender({
 		path: [path.srcHtml] // String or Array
 	}))
+	.pipe(replace(/\n+/g, '\n')) // 2行以上の改行を1行にする
 	.pipe(gulp.dest(path.dest));
 });
 
@@ -52,9 +53,7 @@ gulp.task('compileCss', function() {
 		.pipe(sourcemaps.init())
 		.pipe(postcss(processors, {syntax: scss})) // PostCSSに渡して処理
 		.pipe(sourcemaps.write('.'))
-		.pipe(csscomb())
-//		.pipe(replace(/(;\n)\n/g, '$1')) // 改行が2つ連続してる場合は、1つにする
-//		.pipe(replace(/(\*\/\n)(\/\*)/g, '$1\n$2')) // 連続するコメント行は1行あける
+//		.pipe(csscomb()) // 納品時の整形に使用
 		.pipe(gulp.dest(path.destCss))
 });
 

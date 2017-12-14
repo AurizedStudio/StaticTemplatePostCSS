@@ -42,16 +42,16 @@
 	}
 }
 .bdtnone {
-	border-top: none;
+	border-top: none !important;
 }
 .bdrnone {
-	border-right: none;
+	border-right: none !important;
 }
 .bdbnone {
-	border-bottom: none;
+	border-bottom: none !important;
 }
 .bdlnone {
-	border-left: none;
+	border-left: none !important;
 }
 .mt0 {
 	margin-top: 0 !important;
